@@ -122,13 +122,15 @@ section {
     gap: 19px;
 }
 
+
 .site-header nav a {
-    font-size: .69rem;
+    font-size: .85rem;
     letter-spacing: .06em;
-    opacity: .75;
+    opacity: 1;
     border-bottom: 2px solid transparent;
     padding: 7px 0;
 }
+
 
 .site-header nav a.active,.site-header nav a:hover {
     opacity: 1;
