@@ -164,11 +164,14 @@ section {
     margin: 20px 0;
 }
 
+
 .hint {
-    font-size: .78rem;
+    font-size: 1rem;
+    font-weight: 600;
     color: var(--mocha);
     margin-top: 24px;
 }
+
 
 .shape-area {
     position: relative;
@@ -767,4 +770,10 @@ dialog::backdrop {
 
 .hero {
     background: #FAF6F1;
+}
+
+
+.hero-content > p:not(.hint):not(.eyebrow) {
+    font-size: 1.15rem;
+    font-weight: 600;
 }
