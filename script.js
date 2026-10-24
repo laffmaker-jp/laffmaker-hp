@@ -47,14 +47,16 @@ const character = remaining[
 img.dataset.pose = character.image.replace('.png', '');
 
    // 6か所の登場位置を用意
+
 const positions = [
-  { left: '5%', top: '5%' },
-  { left: '38%', top: '0%' },
-  { left: '72%', top: '5%' },
-  { left: '5%', top: '55%' },
-  { left: '38%', top: '55%' },
-  { left: '72%', top: '55%' }
+  { left: '3%', top: '20%' },
+  { left: '32%', top: '0%' },
+  { left: '75%', top: '25%' },
+  { left: '12%', top: '65%' },
+  { left: '43%', top: '48%' },
+  { left: '78%', top: '72%' }
 ];
+
 
 // まだ使われていない位置からランダムに選ぶ
 const usedPositions = [...existing].map(el => el.dataset.position);
