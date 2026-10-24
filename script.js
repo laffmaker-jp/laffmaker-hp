@@ -44,6 +44,7 @@ const character = remaining[
     img.src = character.image;
     img.alt = character.name;
     img.className = `hero-character ${character.type}`;
+img.dataset.pose = character.image.replace('.png', '');
 
    // 6か所の登場位置を用意
 const positions = [
