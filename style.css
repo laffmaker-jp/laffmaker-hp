@@ -859,3 +859,80 @@ dialog::backdrop {
         animation: none !important;
     }
 }
+
+/* ポーズ別リアクション */
+.hero-character.reacting {
+    animation-duration: .7s;
+    animation-timing-function: ease-in-out;
+}
+
+/* BOY：ひょこひょこ */
+.hero-character[data-pose="laffboy"].reacting {
+    animation-name: boy-hyoko;
+}
+
+/* GIRL：飛び出し */
+.hero-character[data-pose="laffgirl"].reacting {
+    animation-name: girl-pyon;
+}
+
+/* GIRL：ニヤリ */
+.hero-character[data-pose="laffgirl-niya"].reacting {
+    animation-name: girl-yura;
+}
+
+/* GIRL：ジャンプ */
+.hero-character[data-pose="laffgirl-jump"].reacting {
+    animation-name: girl-jump;
+}
+
+/* BOY：座る */
+.hero-character[data-pose="laffboy-suwaru"].reacting {
+    animation-name: boy-yura;
+}
+
+/* BOY：びっくり */
+.hero-character[data-pose="laffboy-bikkuri"].reacting {
+    animation-name: boy-bikkuri;
+}
+
+@keyframes boy-hyoko {
+    0%, 100% { transform: translateX(0); }
+    40% { transform: translateX(-12px) rotate(-5deg); }
+    70% { transform: translateX(5px); }
+}
+
+@keyframes girl-pyon {
+    0%, 100% { transform: translateY(0); }
+    45% { transform: translateY(-25px) scale(1.08); }
+}
+
+@keyframes girl-yura {
+    0%, 100% { transform: rotate(0); }
+    35% { transform: rotate(-7deg); }
+    70% { transform: rotate(7deg); }
+}
+
+@keyframes girl-jump {
+    0%, 100% { transform: translateY(0); }
+    35% { transform: translateY(-32px); }
+    60% { transform: translateY(-10px); }
+}
+
+@keyframes boy-yura {
+    0%, 100% { transform: rotate(0); }
+    50% { transform: rotate(5deg); }
+}
+
+@keyframes boy-bikkuri {
+    0%, 100% { transform: translateY(0) scale(1); }
+    25% { transform: translateY(-18px) scale(1.12); }
+    50% { transform: translateY(0) scale(1); }
+    65% { transform: translateY(-6px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-character.reacting {
+        animation: none !important;
+    }
+}
