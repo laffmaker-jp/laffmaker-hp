@@ -975,3 +975,11 @@ dialog::backdrop {
 #works .filter.active {
     color: #fff9f1;
 }
+
+/* WORKSの作品画像 */
+#works .work-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
