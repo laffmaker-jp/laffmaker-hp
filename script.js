@@ -28,7 +28,17 @@ document.querySelectorAll('.shape').forEach(shape => {
     }
 
     // どちらが出るかはランダム
-    const character = characters[Math.floor(Math.random() * characters.length)];
+    
+const usedImages = [...existing].map(img => img.getAttribute('src'));
+
+const remaining = characters.filter(
+    character => !usedImages.includes(character.image)
+);
+
+const character = remaining[
+    Math.floor(Math.random() * remaining.length)
+];
+
     const img = document.createElement('img');
 
     img.src = character.image;
