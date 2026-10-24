@@ -60,3 +60,34 @@ const recipes=[{key:'heart+sparkle',icon:'💖',name:'キラキラハート'},{k
 const stage=document.querySelector('#lab-stage');let selected=null;const materials=[...document.querySelectorAll('.lab-material')];materials.forEach(el=>{let startX=0,startY=0,startLeft=0,startTop=0,moved=false;el.addEventListener('pointerdown',e=>{if(e.button!==0)return;startX=e.clientX;startY=e.clientY;startLeft=el.offsetLeft;startTop=el.offsetTop;moved=false;el.setPointerCapture(e.pointerId);el.style.zIndex=5});el.addEventListener('pointermove',e=>{if(!el.hasPointerCapture(e.pointerId))return;const dx=e.clientX-startX,dy=e.clientY-startY;if(Math.abs(dx)+Math.abs(dy)>8)moved=true;if(moved){el.style.left=Math.max(0,Math.min(stage.clientWidth-el.offsetWidth,startLeft+dx))+'px';el.style.top=Math.max(0,Math.min(stage.clientHeight-el.offsetHeight,startTop+dy))+'px'}});el.addEventListener('pointerup',e=>{el.style.zIndex=2;if(moved){const r=el.getBoundingClientRect();const cx=r.left+r.width/2,cy=r.top+r.height/2;const target=materials.find(other=>{if(other===el)return false;const o=other.getBoundingClientRect();return cx>=o.left&&cx<=o.right&&cy>=o.top&&cy<=o.bottom});if(target)combine(el.dataset.material,target.dataset.material)}else{if(selected&&selected!==el){combine(selected.dataset.material,el.dataset.material);selected.classList.remove('selected');selected=null}else{if(selected)selected.classList.remove('selected');selected=selected===el?null:el;if(selected)selected.classList.add('selected')}}});el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();el.dispatchEvent(new PointerEvent('pointerup'))}})});
 const form=document.querySelector('#contact-form');const fields=document.querySelector('#form-fields');const review=document.querySelector('#form-review');form.addEventListener('submit',e=>{e.preventDefault();if(!form.reportValidity())return;const data=new FormData(form);const dl=document.querySelector('#review-list');dl.replaceChildren();[['お名前','name'],['メールアドレス','email'],['お問い合わせの種類','category'],['お問い合わせ内容','message']].forEach(([label,key])=>{const dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=label;dd.textContent=String(data.get(key)||'');dl.append(dt,dd)});fields.hidden=true;review.hidden=false;review.scrollIntoView({behavior:'smooth',block:'center'})});document.querySelector('#edit-form').addEventListener('click',()=>{fields.hidden=false;review.hidden=true;form.scrollIntoView({behavior:'smooth',block:'center'})});
 const reactions=['ふたりで大笑い！ あははは！','GIRLがつつく → BOYがびっくり！','BOYが転ぶ → GIRLが呆れ笑い！','ふたりでハイタッチ！ ✨'];document.querySelectorAll('.footer-character').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#footer-reaction').textContent=reactions[Math.floor(Math.random()*reactions.length)]}));
+
+
+/* =========================
+   キャラのランダムリアクション
+========================= */
+
+setInterval(() => {
+    const characters = [
+        ...document.querySelectorAll('.hero-character')
+    ];
+
+    if (characters.length === 0) return;
+
+    // 画面にHOMEが見えているときだけ動く
+    const home = document.querySelector('#home');
+    const rect = home.getBoundingClientRect();
+
+    if (rect.bottom <= 0 || rect.top >= window.innerHeight) {
+        return;
+    }
+
+    // 1人をランダムに選んでリアクション
+    const character = characters[
+        Math.floor(Math.random() * characters.length)
+    ];
+
+    character.classList.remove('reacting');
+    void character.offsetWidth;
+    character.classList.add('reacting');
+
+}, 5000);
