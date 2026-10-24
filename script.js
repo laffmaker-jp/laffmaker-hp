@@ -29,9 +29,27 @@ document.querySelectorAll('.shape').forEach(shape => {
     img.alt = character.name;
     img.className = `hero-character ${character.type}`;
 
-    // 登場位置もランダム
-    img.style.left = `${10 + Math.random() * 65}%`;
-    img.style.top = `${10 + Math.random() * 55}%`;
+   // 6か所の登場位置を用意
+const positions = [
+  { left: '5%', top: '5%' },
+  { left: '38%', top: '0%' },
+  { left: '72%', top: '5%' },
+  { left: '5%', top: '55%' },
+  { left: '38%', top: '55%' },
+  { left: '72%', top: '55%' }
+];
+
+// まだ使われていない位置からランダムに選ぶ
+const usedPositions = [...existing].map(el => el.dataset.position);
+const available = positions
+  .map((position, index) => ({ ...position, index }))
+  .filter(position => !usedPositions.includes(String(position.index)));
+
+const chosenPosition = available[Math.floor(Math.random() * available.length)];
+
+img.style.left = chosenPosition.left;
+img.style.top = chosenPosition.top;
+img.dataset.position = String(chosenPosition.index);
 
     reveal.appendChild(img);
   });
