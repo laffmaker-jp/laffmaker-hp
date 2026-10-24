@@ -949,3 +949,29 @@ dialog::backdrop {
         padding-bottom: 100px;
     }
 }
+
+/* WORKS：文字の読みやすさ改善 */
+#works .section-lead {
+    color: #38251e;
+    opacity: 1;
+    font-weight: 500;
+}
+
+#works .work-info small {
+    color: #70432f;
+    font-weight: 700;
+}
+
+#works .work-info strong {
+    color: #38251e;
+    font-weight: 700;
+}
+
+#works .filter {
+    color: #38251e;
+    font-weight: 700;
+}
+
+#works .filter.active {
+    color: #fff9f1;
+}
