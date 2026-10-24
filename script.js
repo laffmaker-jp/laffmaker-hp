@@ -3,10 +3,16 @@ const nav=document.querySelector('#nav');const menu=document.querySelector('.men
 const sections=[...document.querySelectorAll('main section')];const links=[...nav.querySelectorAll('a')];const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}})},{rootMargin:'-20% 0px -65% 0px'});sections.forEach(s=>observer.observe(s));const revealObserver=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');revealObserver.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(e=>revealObserver.observe(e));
 
 const reveal = document.querySelector('.character-reveal');
+
 const characters = [
   { name: 'LAFFGIRL', image: 'laffgirl.png', type: 'girl' },
-  { name: 'LAFFBOY', image: 'laffboy.png', type: 'boy' }
+  { name: 'LAFFGIRL', image: 'laffgirl-jump.png', type: 'girl' },
+  { name: 'LAFFGIRL', image: 'laffgirl-niya.png', type: 'girl' },
+  { name: 'LAFFBOY', image: 'laffboy.png', type: 'boy' },
+  { name: 'LAFFBOY', image: 'laffboy-bikkuri.png', type: 'boy' },
+  { name: 'LAFFBOY', image: 'laffboy-suwaru.png', type: 'boy' }
 ];
+
 
 document.querySelectorAll('.shape').forEach(shape => {
   shape.addEventListener('click', () => {
