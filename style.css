@@ -936,3 +936,16 @@ dialog::backdrop {
         animation: none !important;
     }
 }
+
+/* ABOUTの上下余白 */
+#about {
+    padding-top: 80px;
+    padding-bottom: 130px;
+}
+
+@media (max-width: 600px) {
+    #about {
+        padding-top: 65px;
+        padding-bottom: 100px;
+    }
+}
