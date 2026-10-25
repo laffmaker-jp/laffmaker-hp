@@ -15,7 +15,7 @@ const characters = [
 
 
 document.querySelectorAll('.shape').forEach(shape => {
-  shape.addEventListener('click', () => {
+  shape.addEventListener('pointerenter', () => {
     const existing = reveal.querySelectorAll('.hero-character');
 
     // 最大6人。6人になったら誰かがリアクション！
