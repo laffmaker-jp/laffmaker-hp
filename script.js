@@ -15,7 +15,13 @@ const characters = [
 
 
 document.querySelectorAll('.shape').forEach(shape => {
-  shape.addEventListener('pointerenter', () => {
+  
+shape.addEventListener(
+  window.matchMedia('(hover: hover) and (pointer: fine)').matches
+    ? 'pointerenter'
+    : 'click',
+  () => {
+
     const existing = reveal.querySelectorAll('.hero-character');
 
     // 最大6人。6人になったら誰かがリアクション！
