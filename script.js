@@ -92,11 +92,13 @@ const works=[{title:'LINEスタンプ',category:'stamps',tag:'LINEスタンプ',
 ,{title:'採寸RPG',category:'tool',tag:'Webツール',icon:'📏',description:'内見の採寸をゲーム感覚で記録するWebツール。',slides:['📏','🏠','📋']}];const grid=document.querySelector('#work-grid');const modal=document.querySelector('#work-modal');const modalContent=document.querySelector('#modal-content');function renderWorks(filter='all'){grid.replaceChildren();works.filter(w=>filter==='all'||w.category===filter).forEach(w=>{const b=document.createElement('button');b.className='work-card';
 b.innerHTML = `
   <div class="work-thumb">
-    ${w.category === 'stamps'
+   ${w.category === 'stamps'
   ? '<img src="works-line-stamps.png" alt="LINEスタンプ制作例">'
   : w.category === 'illustration'
     ? '<img src="powaton.jpg" alt="キャラクターイラスト制作例">'
-    : w.icon}
+    : w.title === 'LAFFMAKER LP'
+      ? '<img src="laffmaker-lp.jpg" alt="LAFFMAKER LP制作例">'
+      : w.icon}
   </div>
   <div class="work-info">
     <small>${w.tag}</small>
