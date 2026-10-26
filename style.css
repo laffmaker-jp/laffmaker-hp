@@ -995,3 +995,7 @@ dialog::backdrop {
   height: 100%;
   object-fit: contain;
 }
+#works .work-thumb img[src="laffmaker-lp.jpg"] {
+  object-fit: contain;
+  background: #080b12;
+}
