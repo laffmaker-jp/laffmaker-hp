@@ -99,7 +99,7 @@ b.innerHTML = `
    : w.title === 'LAFFMAKER LP'
   ? '<img src="laffmaker-lp.jpg" alt="LAFFMAKER LP制作例">'
   : w.category === 'tool'
-    ? '<div class="rpg-images"><img src="rpg.png" alt="採寸RPGトップ画面"><img src="game_clear.png" alt="クエストクリア画面"></div>'
+    ? '<div class="rpg-images"><img src="rpg.jpg" alt="採寸RPGトップ画面"><img src="game_clear.png" alt="クエストクリア画面"></div>'
     : w.icon}
   </div>
   <div class="work-info">
