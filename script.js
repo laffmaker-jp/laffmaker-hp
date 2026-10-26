@@ -93,8 +93,10 @@ const works=[{title:'LINEスタンプ',category:'stamps',tag:'LINEスタンプ',
 b.innerHTML = `
   <div class="work-thumb">
     ${w.category === 'stamps'
-      ? '<img src="works-line-stamps.png" alt="LINEスタンプ制作例">'
-      : w.icon}
+  ? '<img src="works-line-stamps.png" alt="LINEスタンプ制作例">'
+  : w.category === 'illustration'
+    ? '<img src="powaton.jpg" alt="キャラクターイラスト制作例">'
+    : w.icon}
   </div>
   <div class="work-info">
     <small>${w.tag}</small>
