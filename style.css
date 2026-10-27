@@ -1141,3 +1141,10 @@ dialog::backdrop {
   font-weight: 600;
   line-height: 1.8;
 }
+/* キャラクターイラスト：冒頭の説明文 */
+#modal-content > p:first-of-type {
+  color: #38251e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.8;
+}
