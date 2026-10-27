@@ -185,7 +185,7 @@ const update = () => {
       <div class="illustration-arrow">↓</div>
 
       <figure>
-        <img src="powaton.jpg" alt="オリジナルキャラクター ぽわとん">
+        <img src="powaton-1.png" alt="オリジナルキャラクター ぽわとん">
         <figcaption>完成キャラクター「ぽわとん」</figcaption>
       </figure>
 
