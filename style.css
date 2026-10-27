@@ -1121,3 +1121,23 @@ dialog::backdrop {
   line-height: 1.8;
   margin: 12px 0 0;
 }
+/* ぽわとん制作例：文字の読みやすさ */
+
+.illustration-example h3 {
+  color: #38251e;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.illustration-keywords span {
+  color: #54253b;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.illustration-example p {
+  color: #38251e;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.8;
+}
