@@ -1008,3 +1008,36 @@ dialog::backdrop {
   object-fit: contain;
   margin: auto;
 }
+
+/* LINEスタンプ詳細：制作前 → 制作後 */
+.modal-slide:has(.stamp-before-after) {
+  background: transparent;
+  min-height: 0;
+}
+
+.stamp-before-after {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.stamp-before-after img {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 230px !important;
+  object-fit: contain;
+}
+
+.stamp-before-after figure {
+  margin: 0;
+  min-width: 0;
+  text-align: center;
+}
+
+.stamp-before-after figcaption {
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 6px;
+}
