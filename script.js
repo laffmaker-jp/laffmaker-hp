@@ -122,11 +122,7 @@ if (w.category === 'stamps') {
       </figure>
     </div>
   `;
-} else {
-  slide.textContent = w.slides[index];
-}
-}
-modalContent.querySelector('.counter').textContent = `${index + 1} / ${w.slides.length}`;
+
 modalContent.querySelector('.modal-controls').hidden = w.category === 'stamps';
 modalContent.querySelector('.tiny').hidden = w.category === 'stamps';
 };modalContent.querySelector('.prev').onclick=()=>{index=(index-1+w.slides.length)%w.slides.length;update()};modalContent.querySelector('.next').onclick=()=>{index=(index+1)%w.slides.length;update()};update();modal.showModal()}document.querySelector('#modal-close').addEventListener('click',()=>modal.close());modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});document.querySelectorAll('.filter').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');renderWorks(b.dataset.filter)}));renderWorks();
