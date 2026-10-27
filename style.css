@@ -1041,3 +1041,51 @@ dialog::backdrop {
   font-weight: 700;
   margin-top: 6px;
 }
+/* キャラクターイラスト制作例 */
+.illustration-example {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.illustration-example figure {
+  margin: 20px 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.illustration-example img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  max-height: 350px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.illustration-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.illustration-keywords span {
+  padding: 8px 12px;
+  border-radius: 20px;
+  background: #ffe6f0;
+  color: #6b304b;
+}
+
+.illustration-arrow {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.illustration-example p {
+  line-height: 1.8;
+}
