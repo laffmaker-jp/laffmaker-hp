@@ -136,9 +136,14 @@ const stampExamples = [
     name: 'peace'
   },
   {
-    model: 'usa-1.jpg',
+    model: 'usa-1.png',
     stamp: 'usa-2.png',
     name: 'うさぎ'
+  },
+  {
+    model: 'yes-1.png',
+    stamp: 'yes-2.png',
+    name: '男性モデル'
   }
 ];
 
