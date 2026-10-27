@@ -1148,3 +1148,28 @@ dialog::backdrop {
   font-weight: 700;
   line-height: 1.8;
 }
+/* 採寸RPG 詳細画像を横並び */
+.rpg-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
+  margin-top: 20px;
+}
+
+.rpg-gallery figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.rpg-gallery img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+}
+
+.rpg-gallery figcaption {
+  margin-top: 8px;
+  text-align: center;
+}
