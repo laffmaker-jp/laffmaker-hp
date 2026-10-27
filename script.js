@@ -255,17 +255,19 @@ const update = () => {
       <h3>採寸RPG 📏</h3>
 
       <p>お部屋の採寸をゲーム感覚で楽しく記録！<br>
-      寸法や写真を保存し、冒険報告書としてPDFにまとめられるWebツールです。</p>
+      寸法や写真を保存し、冒険報告書として<br>PDFにまとめられるWebツールです。</p>
 
-      <figure>
-        <img src="rpg-route.jpg" alt="搬入ルートの採寸画面">
-        <figcaption>搬入ルートの採寸</figcaption>
-      </figure>
+     <div class="rpg-gallery">
+  <figure>
+    <img src="rpg-route.jpg" alt="搬入ルートの採寸画面">
+    <figcaption>搬入ルートの採寸</figcaption>
+  </figure>
 
-      <figure>
-        <img src="rpg-quest.jpg" alt="緊急クエストの画面">
-        <figcaption>緊急クエスト</figcaption>
-      </figure>
+  <figure>
+    <img src="rpg-quest.jpg" alt="緊急クエストの画面">
+    <figcaption>緊急クエスト</figcaption>
+  </figure>
+</div>
 
       <p>
         <a href="https://vt.tiktok.com/ZSgVV1996/"
