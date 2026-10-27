@@ -176,11 +176,11 @@ const update = () => {
       <h3>4つのキーワードから生まれたキャラクター</h3>
 
       <div class="illustration-keywords">
-        <span>🐷 ぶた</span>
-        <span>🍓 いちご</span>
-        <span>🩷 ピンク</span>
-        <span>☁️ ふわふわ</span>
-      </div>
+  <span>🐷 ぶた</span>
+  <span>☁️ ふわふわ</span>
+  <span>🍓 いちご</span>
+  <span>🩷 ピンク</span>
+</div>
 
       <div class="illustration-arrow">↓</div>
 
