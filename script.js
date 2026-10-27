@@ -249,6 +249,43 @@ const update = () => {
   controls.hidden = true;
   note.hidden = true;
 
+} else if (w.category === 'tool') {
+  slide.innerHTML = `
+    <div class="illustration-example">
+      <h3>採寸RPG 📏</h3>
+
+      <p>お部屋の採寸をゲーム感覚で楽しく記録！<br>
+      寸法や写真を保存し、冒険報告書としてPDFにまとめられるWebツールです。</p>
+
+      <figure>
+        <img src="rpg-route.jpg" alt="搬入ルートの採寸画面">
+        <figcaption>搬入ルートの採寸</figcaption>
+      </figure>
+
+      <figure>
+        <img src="rpg-quest.jpg" alt="緊急クエストの画面">
+        <figcaption>緊急クエスト</figcaption>
+      </figure>
+
+      <p>
+        <a href="https://vt.tiktok.com/ZSgVV1996/"
+           target="_blank" rel="noopener noreferrer">
+          ▶ 操作動画を見る（TikTok）
+        </a>
+      </p>
+
+      <p>
+        <a href="https://laffmaker-jp.github.io/laffmaker/saisun-rpg/"
+           target="_blank" rel="noopener noreferrer">
+          ▶ 採寸RPGを体験する
+        </a>
+      </p>
+    </div>
+  `;
+
+  controls.hidden = true;
+  note.hidden = true;
+    
 } else {
   slide.textContent = w.slides[index];
 
