@@ -170,8 +170,34 @@ const update = () => {
     controls.hidden = false;
     note.hidden = true;
 
-  } else {
-    slide.textContent = w.slides[index];
+  } else if (w.category === 'illustration') {
+  slide.innerHTML = `
+    <div class="illustration-example">
+      <h3>4つのキーワードから生まれたキャラクター</h3>
+
+      <div class="illustration-keywords">
+        <span>🐷 ぶた</span>
+        <span>🍓 いちご</span>
+        <span>🩷 ピンク</span>
+        <span>☁️ ふわふわ</span>
+      </div>
+
+      <div class="illustration-arrow">↓</div>
+
+      <figure>
+        <img src="powaton.jpg" alt="オリジナルキャラクター ぽわとん">
+        <figcaption>完成キャラクター「ぽわとん」</figcaption>
+      </figure>
+
+      <p>4つのキーワードから生まれたオリジナルキャラクター。イメージを形にするキャラクターデザインの制作例です。</p>
+    </div>
+  `;
+
+  controls.hidden = true;
+  note.hidden = true;
+
+} else {
+  slide.textContent = w.slides[index];
 
     modalContent.querySelector('.counter').textContent =
       `${index + 1} / ${w.slides.length}`;
