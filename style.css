@@ -1041,81 +1041,83 @@ dialog::backdrop {
   font-weight: 700;
   margin-top: 6px;
 }
-/* キャラクターイラスト制作例 */
+/* =========================
+   キャラクターイラスト制作例
+========================= */
+
+.modal-slide:has(.illustration-example) {
+  display: block;
+  min-height: 0;
+  padding: 18px;
+  font-size: 16px;
+  background: #d6b89c;
+}
+
 .illustration-example {
   width: 100%;
   max-width: 100%;
   min-width: 0;
-  box-sizing: border-box;
   text-align: center;
 }
 
-.illustration-example figure {
-  margin: 20px 0;
-  width: 100%;
-  max-width: 100%;
+.illustration-example h3 {
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 0 0 16px;
 }
 
-.illustration-example img {
-  display: block;
-  width: 100%;
-  max-width: 420px;
-  max-height: 350px;
-  height: auto;
-  object-fit: contain;
-  margin: 0 auto;
-}
-
-.illustration-keywords {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 20px 0;
-}
-
-.illustration-keywords span {
-  padding: 8px 12px;
-  border-radius: 20px;
-  background: #ffe6f0;
-  color: #6b304b;
-}
-
-.illustration-arrow {
-  font-size: 28px;
-  margin: 15px 0;
-}
-
-.illustration-example p {
-  line-height: 1.8;
-}
-/* ぽわとん制作例：キーワードを2列×2行 */
+/* キーワード：2列×2行 */
 .illustration-keywords {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 10px;
   max-width: 420px;
-  margin: 16px auto;
+  margin: 0 auto;
 }
 
 .illustration-keywords span {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 8px;
-  text-align: center;
+  padding: 12px 6px;
   font-size: 16px;
+  line-height: 1.5;
   background: #ffe6f0;
   color: #6b304b;
   border-radius: 14px;
 }
 
-/* 矢印と完成画像の間隔 */
+/* 矢印 */
 .illustration-arrow {
-  margin: 10px 0;
   font-size: 26px;
+  line-height: 1.5;
+  margin: 12px 0;
 }
 
+/* 完成画像 */
 .illustration-example figure {
-  margin: 10px 0;
+  margin: 0;
+  width: 100%;
+}
+
+.illustration-example img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 260px;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.illustration-example figcaption {
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+.illustration-example p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 12px 0 0;
 }
