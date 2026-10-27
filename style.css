@@ -1089,3 +1089,33 @@ dialog::backdrop {
 .illustration-example p {
   line-height: 1.8;
 }
+/* ぽわとん制作例：キーワードを2列×2行 */
+.illustration-keywords {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 420px;
+  margin: 16px auto;
+}
+
+.illustration-keywords span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 8px;
+  text-align: center;
+  font-size: 16px;
+  background: #ffe6f0;
+  color: #6b304b;
+  border-radius: 14px;
+}
+
+/* 矢印と完成画像の間隔 */
+.illustration-arrow {
+  margin: 10px 0;
+  font-size: 26px;
+}
+
+.illustration-example figure {
+  margin: 10px 0;
+}
