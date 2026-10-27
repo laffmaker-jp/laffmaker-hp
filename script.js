@@ -170,30 +170,58 @@ const update = () => {
     controls.hidden = false;
     note.hidden = true;
 
-  } else if (w.category === 'illustration') {
-  slide.innerHTML = `
-    <div class="illustration-example">
-      <h3>4つのキーワードから生まれたキャラクター</h3>
+ } else if (w.category === 'illustration') {
 
-      <div class="illustration-keywords">
-  <span>🐷 ぶた</span>
-  <span>☁️ ふわふわ</span>
-  <span>🍓 いちご</span>
-  <span>🩷 ピンク</span>
-</div>
+  if (index === 0) {
+    // 制作例① ぽわとん
+    slide.innerHTML = `
+      <div class="illustration-example">
+        <h3>4つのキーワードから生まれたキャラクター</h3>
 
-      <div class="illustration-arrow">↓</div>
+        <div class="illustration-keywords">
+          <span>🐷 ぶた</span>
+          <span>☁️ ふわふわ</span>
+          <span>🍓 いちご</span>
+          <span>🩷 ピンク</span>
+        </div>
 
-      <figure>
-        <img src="powaton-1.png" alt="オリジナルキャラクター ぽわとん">
-        <figcaption>完成キャラクター「ぽわとん」</figcaption>
-      </figure>
+        <div class="illustration-arrow">↓</div>
 
-      <p>4つのキーワードから生まれたオリジナルキャラクター。イメージを形にするキャラクターデザインの制作例です。</p>
-    </div>
-  `;
+        <figure>
+          <img src="powaton-1.png" alt="オリジナルキャラクター ぽわとん">
+          <figcaption>完成キャラクター「ぽわとん」</figcaption>
+        </figure>
 
-  controls.hidden = true;
+        <p>4つのキーワードから生まれたオリジナルキャラクター。イメージを形にするキャラクターデザインの制作例です。</p>
+      </div>
+    `;
+  } else {
+    // 制作例② peace
+    slide.innerHTML = `
+      <div class="illustration-example">
+        <h3>モデル写真からキャラクターイラストへ</h3>
+
+        <div class="stamp-before-after">
+          <figure>
+            <img src="peace(1).png" alt="peaceのモデル写真">
+            <figcaption>モデル写真</figcaption>
+          </figure>
+
+          <figure>
+            <img src="peace2.png" alt="peaceの完成イラスト">
+            <figcaption>完成イラスト</figcaption>
+          </figure>
+        </div>
+
+        <p>モデル写真の雰囲気や特徴を活かして、親しみやすいキャラクターイラストに仕上げた制作例です。</p>
+      </div>
+    `;
+  }
+
+  modalContent.querySelector('.counter').textContent =
+    `${index + 1} / 2`;
+
+  controls.hidden = false;
   note.hidden = true;
 
 } else {
@@ -208,13 +236,21 @@ const update = () => {
 };
 
   modalContent.querySelector('.prev').onclick = () => {
-  const total = w.category === 'stamps' ? stampExamples.length : w.slides.length;
+  const total = w.category === 'stamps'
+  ? stampExamples.length
+  : w.category === 'illustration'
+    ? 2
+    : w.slides.length;
 index = (index - 1 + total) % total;
     update();
   };
 
   modalContent.querySelector('.next').onclick = () => {
-    const total = w.category === 'stamps' ? stampExamples.length : w.slides.length;
+    const total = w.category === 'stamps'
+  ? stampExamples.length
+  : w.category === 'illustration'
+    ? 2
+    : w.slides.length;
 index = (index + 1) % total;
     update();
   };
