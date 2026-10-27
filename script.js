@@ -129,40 +129,62 @@ b.addEventListener('click',()=>openWork(w));grid.append(b)})}function openWork(w
   const controls = modalContent.querySelector('.modal-controls');
   const note = modalContent.querySelector('.tiny');
 
-  const update = () => {
-    if (w.category === 'stamps') {
-      slide.innerHTML = `
-        <div class="stamp-before-after">
-          <figure>
-            <img src="peace.png" alt="モデル peace">
-            <figcaption>モデル写真</figcaption>
-          </figure>
-          <figure>
-            <img src="stamp-1.png" alt="peaceのLINEスタンプ4個">
-            <figcaption>LINEスタンプ</figcaption>
-          </figure>
-        </div>
-      `;
+const stampExamples = [
+  {
+    model: 'peace.png',
+    stamp: 'stamp-1.png',
+    name: 'peace'
+  },
+  {
+    model: 'usa-1.png',
+    stamp: 'usa-2.png',
+    name: 'うさぎ'
+  }
+];
 
-      controls.hidden = true;
-      note.hidden = true;
-    } else {
-      slide.textContent = w.slides[index];
-      modalContent.querySelector('.counter').textContent =
-        `${index + 1} / ${w.slides.length}`;
+const update = () => {
+  if (w.category === 'stamps') {
+    const example = stampExamples[index];
 
-      controls.hidden = false;
-      note.hidden = false;
-    }
-  };
+    slide.innerHTML = `
+      <div class="stamp-before-after">
+        <figure>
+          <img src="${example.model}" alt="${example.name}のモデル写真">
+          <figcaption>モデル写真</figcaption>
+        </figure>
+        <figure>
+          <img src="${example.stamp}" alt="${example.name}のLINEスタンプ">
+          <figcaption>LINEスタンプ</figcaption>
+        </figure>
+      </div>
+    `;
+
+    modalContent.querySelector('.counter').textContent =
+      `${index + 1} / ${stampExamples.length}`;
+
+    controls.hidden = false;
+    note.hidden = true;
+
+  } else {
+    slide.textContent = w.slides[index];
+
+    modalContent.querySelector('.counter').textContent =
+      `${index + 1} / ${w.slides.length}`;
+
+    controls.hidden = false;
+    note.hidden = false;
+  }
+};
 
   modalContent.querySelector('.prev').onclick = () => {
-    index = (index - 1 + w.slides.length) % w.slides.length;
+  const total = w.category === 'stamps' ? stampExamples.length : w.slides.length;
+index = (index - 1 + total) % total;
     update();
   };
 
   modalContent.querySelector('.next').onclick = () => {
-    index = (index + 1) % w.slides.length;
+    const total = w.category === 'stamps' ? stampExamples.length : w.slides.length;
+index = (index + 1) % total;
     update();
   };
 
