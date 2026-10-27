@@ -136,7 +136,7 @@ const stampExamples = [
     name: 'peace'
   },
   {
-    model: 'usa-1.png',
+    model: 'usa-1.jpg',
     stamp: 'usa-2.png',
     name: 'うさぎ'
   }
