@@ -224,6 +224,31 @@ const update = () => {
   controls.hidden = false;
   note.hidden = true;
 
+} else if (w.category === 'web') {
+  slide.innerHTML = `
+    <div class="illustration-example">
+      <h3>LAFFMAKER ランディングページ</h3>
+
+      <figure>
+        <img src="laffmaker-lp2.jpg" alt="LAFFMAKER LP スマートフォン版">
+        <figcaption>スマートフォン版デザイン</figcaption>
+      </figure>
+
+      <p>LAFFMAKERの世界観と制作への想いを表現したランディングページです。</p>
+
+      <p>
+        <a href="https://laffmaker-jp.github.io/laffmaker/"
+           target="_blank"
+           rel="noopener noreferrer">
+          実際のサイトを見る ↗
+        </a>
+      </p>
+    </div>
+  `;
+
+  controls.hidden = true;
+  note.hidden = true;
+
 } else {
   slide.textContent = w.slides[index];
 
