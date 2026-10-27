@@ -1163,8 +1163,9 @@ dialog::backdrop {
 }
 
 .rpg-gallery img {
+  display: block;
   width: 100%;
-  height: auto;
+  height: 400px;
   max-height: none;
   object-fit: contain;
 }
