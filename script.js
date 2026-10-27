@@ -203,7 +203,7 @@ const update = () => {
 
         <div class="stamp-before-after">
           <figure>
-            <img src="peace(1).png" alt="peaceのモデル写真">
+            <img src="peace.png" alt="peaceのモデル写真">
             <figcaption>モデル写真</figcaption>
           </figure>
 
