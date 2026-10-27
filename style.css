@@ -999,3 +999,12 @@ dialog::backdrop {
   object-fit: contain;
   background: #080b12;
 }
+#works .modal-slide img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  margin: auto;
+}
