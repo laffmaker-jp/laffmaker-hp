@@ -1177,16 +1177,16 @@ dialog::backdrop {
 /* SERVICES：LINEスタンプ制作 */
 .service-art.service-stamps {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  gap: 12px;
-  padding: 16px;
+  padding: 10px;
   overflow: hidden;
 }
+
 .service-art.service-stamps img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   max-height: 100%;
   object-fit: contain;
 }
