@@ -259,7 +259,7 @@ const update = () => {
 
      <div class="rpg-gallery">
   <figure>
-    <img src="rpg-route.jpg" alt="搬入ルートの採寸画面">
+    <img src="rpg-route-extended.jpg" alt="搬入ルートの採寸画面">
     <figcaption>搬入ルートの採寸</figcaption>
   </figure>
 
