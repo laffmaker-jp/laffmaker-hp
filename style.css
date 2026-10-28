@@ -1175,18 +1175,21 @@ dialog::backdrop {
   text-align: center;
 }
 /* SERVICES：LINEスタンプ制作 */
-.service-stamps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.service-art.service-stamps {
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
   padding: 16px;
+  overflow: hidden;
 }
 
-.service-stamps img {
+.service-art.service-stamps img {
   display: block;
-  width: 100%;
+  flex: 0 1 30%;
+  width: 30%;
+  min-width: 0;
+  max-height: 100%;
   height: auto;
-  max-width: 100%;
   object-fit: contain;
 }
