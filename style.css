@@ -1174,3 +1174,19 @@ dialog::backdrop {
   margin-top: 8px;
   text-align: center;
 }
+/* SERVICES：LINEスタンプ制作 */
+.service-stamps {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.service-stamps img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
